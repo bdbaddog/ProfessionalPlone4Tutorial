@@ -49,6 +49,13 @@ class TestSetup(unittest.TestCase):
         self.assertEqual(1,
                          len(acl_users.searchGroups(name='Staff')))
 
+    def test_PloneFormGen_installed(self):
+        portal = self.layer['portal']
+        portal_types = getToolByName(portal,'portal_types')
+        self.assertTrue('FormFolder' in portal_types)
+        
+        
+
         
         
         

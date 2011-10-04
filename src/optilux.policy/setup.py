@@ -27,6 +27,7 @@ setup(name='optilux.policy',
           'setuptools',
           # -*- Extra requirements: -*-
           'Plone',
+          'Products.PloneFormGen',
       ],
       extras_require={
           'test':['plone.app.testing',]

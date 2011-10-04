@@ -20,6 +20,7 @@
       description="Optilux site policy configuration"
       handler="optilux.policy.setuphandlers.importVarious">
       <depends name="rolemap"/>
-   </genericsetup:importStep>
-  
+  </genericsetup:importStep>
+
+  <includeDependencies package="." />
 </configure>
