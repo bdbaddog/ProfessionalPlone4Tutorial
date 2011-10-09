@@ -20,3 +20,4 @@ dist
 *.pyo
 *.tmp*
 var
+.DS_Store
