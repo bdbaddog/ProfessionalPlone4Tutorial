@@ -14,11 +14,50 @@
     <drop theme="/html/head/link" />
     <drop theme="/html/head/comment()" />
 
-    <after content="/html/head/meta | /html/head/title | /html/head/style | /html/head/script | /html/head/link | /html/head/comment()"
-           theme-children="/html/head" />
+    <after content="/html/head/meta" theme-children="/html/head" />
+    <after content="/html/head/title" theme-children="/html/head" />
 
-    <copy attributes="class id dir"
-          content="/html/body"
-          theme="/html/body" />
+    <after 
+      content=" /html/head/base | /html/head/style | /html/head/script | /html/head/link | /html/head/comment()"    
+      theme-children="/html/head" 
+   />
+
+
+    <copy attributes="href" css:content="#portal-logo"
+         css:theme="#logo" />
+
+    <replace css:content="#portal-siteactions li"
+            css:theme-children="#actions" />
+
+    <replace css:content="#portal-personaltools li"
+            css:theme-children="#actions" />
+
+    <after css:theme-children="#actions">
+       <xsl:for-each css:select="#anon-personalbar > a">
+         <li><xsl:copy-of css:select="a"/></li>
+       </xsl:for-each>
+    </after>
+
+    <replace css:content="#portal-globalnav li"
+            css:theme-children="#global-navigation" />
+
+    <replace css:content-children="#portal-breadcrumbs"
+            css:theme-children="#breadcrumbs" />
+
+    <replace css:content="#content"
+            css:theme="#document-content" />
+
+    <before css:content="#edit-bar"
+           css:theme="#document-content" />
+    <drop css:content="#content .portalMessage"/>
+    <before css:content=".portalMessage" css:theme="#document-content"  method="raw" />
+
+    <drop css:content="dl#portletNavigationTree img" />
+
+    <replace css:content-children="#portal-column-one" css:theme-children="#column-one" />
+    <replace css:content-children="#portal-column-two" css:theme-children="#column-two" />
+
+    <after css:content="#kss-spinner" theme-children="/html/body" />
+
   </rules>
 </rules>
