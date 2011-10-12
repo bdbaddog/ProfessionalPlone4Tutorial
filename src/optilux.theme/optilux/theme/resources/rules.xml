@@ -9,10 +9,14 @@
     <theme href="index.html" />
     <drop theme="/html/head/meta" />
     <drop theme="/html/head/title" />
-    <after content="/html/head/meta"
+    <drop theme="/html/head/style" />
+    <drop theme="/html/head/script" />
+    <drop theme="/html/head/link" />
+    <drop theme="/html/head/comment()" />
+
+    <after content="/html/head/meta | /html/head/title | /html/head/style | /html/head/script | /html/head/link | /html/head/comment()"
            theme-children="/html/head" />
-    <after content="/html/head/title"
-           theme-children="/html/head" />
+
     <copy attributes="class id dir"
           content="/html/body"
           theme="/html/body" />
