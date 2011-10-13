@@ -5,14 +5,16 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="optilux.policy">
 
+  <includeDependencies package="." />
 
   <genericsetup:registerProfile
       name="default"
-      title="optilux.policy"
+      title="Optilux Site Policy"
       directory="profiles/default"
       description="Installs the optilux.policy package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+
   <!-- -*- extra stuff goes here -*- -->
   <genericsetup:importStep
       name="optilux-various"
@@ -22,5 +24,5 @@
       <depends name="rolemap"/>
   </genericsetup:importStep>
 
-  <includeDependencies package="." />
+
 </configure>

@@ -6,6 +6,8 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="optilux.theme">
 
+  <includeDependencies package="." />
+
   <plone:static
 	directory="resources"
 	type="theme"
