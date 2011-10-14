@@ -21,5 +21,16 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+   <!-- Override the layout policy view -->
+   <browser:page
+      name="plone_layout"
+      for="*"
+      layer=".interfaces.IOptiluxTheme"
+      permission="zope.Public"
+      class=".layout.OptiluxLayoutPolicy"
+      allowed_interface="plone.app.layout.globals.interfaces.ILayoutPolicy"
+	/>
+
+
   
 </configure>

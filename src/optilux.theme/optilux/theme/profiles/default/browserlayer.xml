@@ -1,0 +1,6 @@
+<layers>
+  <layer 
+    name="optilux.theme"
+    interface="optilux.theme.interfaces.IOptiluxTheme"
+    />
+</layers>
