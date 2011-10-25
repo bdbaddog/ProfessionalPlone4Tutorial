@@ -3,9 +3,9 @@ import os
 
 version = '1.0'
 
-setup(name='optilux.policy',
+setup(name='optilux.cinemacontent',
       version=version,
-      description="Optilux Theatres Policy",
+      description="Optilux Cinema Content",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
@@ -15,9 +15,9 @@ setup(name='optilux.policy',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='Martin Aspeli',
-      author_email='optilude@gmail.com',
-      url='http://optilux-cinemas.com/',
+      author='',
+      author_email='',
+      url='http://svn.plone.org/svn/collective/',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['optilux'],
@@ -26,13 +26,13 @@ setup(name='optilux.policy',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
-          'Plone',
-          'Products.PloneFormGen',
-          'optilux.theme',
-          'optilux.cinemacontent',
+          'plone.app.dexterity [grok]',
+          'plone.app.referenceablebehavior',
+          'plone.app.relationfield',
+          'plone.namedfile [blobs]',
       ],
-      extras_require={
-          'test':['plone.app.testing',]
+      extras_require ={
+          'test' : ['plone.app.testing',],
           },
       entry_points="""
       # -*- Entry points: -*-
